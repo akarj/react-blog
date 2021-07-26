@@ -21,6 +21,11 @@
   // background-color: green;
 }
 
+.topLeft {
+  display: flex;
+  place-content: center;
+}
+
 .topicons {
   font-size: 20px;
   margin-right: 10px;
