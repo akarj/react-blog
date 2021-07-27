@@ -1,4 +1,4 @@
-import Home from "./Components/pages/home/Home.jsx";
+import Home from "./pages/home/Home.jsx";
 import Topbar from "./Components/topbar/Topbar.jsx";
 
 function App() {
