@@ -3,7 +3,7 @@ import "./Sidebar.scss";
 export default function Sidebar() {
   return (
     <div className="sidebar">
-      <div className="sidebarItem">
+      <div className="sidebarItem" id="titleInfoDiv">
         <span className="sidebarTitle">ABOUT ME</span>
         <img
           //   className="topImg"
@@ -20,7 +20,7 @@ export default function Sidebar() {
           voluptas error maxime.
         </p>
       </div>
-      <div className="sidebarItem">
+      <div className="sidebarItem" id="categoryInfoDiv">
         <span className="sidebarTitle">CATEGORIES</span>
         <ul className="sidebarList">
           <li className="sidebarListItem">Life</li>
@@ -31,7 +31,7 @@ export default function Sidebar() {
           <li className="sidebarListItem">Astronomy</li>
         </ul>
       </div>
-      <div className="sidebarItem">
+      <div className="sidebarItem" id="socialMediaIconDiv">
         <span className="sidebarTitle">FOLLOW US</span>
         <div className="sidebarSocial">
           <i className="sidebarIcon fab fa-facebook-f"></i>
