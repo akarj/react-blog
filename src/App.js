@@ -1,7 +1,8 @@
 // import Home from "./pages/home/Home.jsx";
 import Topbar from "./Components/topbar/Topbar.jsx";
-import Single from "./pages/single/Single.jsx";
-import Write from "./pages/write/Write.jsx";
+import Settings from "./pages/settings/Settings.jsx";
+// import Single from "./pages/single/Single.jsx";
+// import Write from "./pages/write/Write.jsx";
 
 function App() {
   return (
@@ -9,7 +10,8 @@ function App() {
       <Topbar />
       {/* <Home /> */}
       {/* <Single /> */}
-      <Write />
+      {/* <Write /> */}
+      <Settings />
     </>
   );
 }
