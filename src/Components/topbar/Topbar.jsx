@@ -35,7 +35,9 @@ export default function Topbar() {
               </Link>
             </li>
             <li className="topListItem">
-              <Link className="link">{user && "LOG OUT"}</Link>
+              <Link className="link" to="/login">
+                {user && "LOG OUT"}
+              </Link>
             </li>
           </ul>
         </nav>
