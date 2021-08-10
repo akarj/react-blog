@@ -6,6 +6,7 @@ node_modules
 /Backend/api/node_modules
 /.pnp
 .pnp.js
+*.rest
 
 #images
 /images/

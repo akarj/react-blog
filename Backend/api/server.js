@@ -2,20 +2,23 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+dotenv.config();
 const authRoute = require("./routes/Auth");
 const usersRoute = require("./routes/Users");
 const postsRoute = require("./routes/Posts");
 const categoryRoute = require("./routes/Categories");
 const multer = require("multer");
 
-dotenv.config();
 app.use(express.json());
+const PORT = process.env.PORT;
+const DATABASE_URL = process.env.MONGO_URL;
 
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect(DATABASE_URL, {
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useCreateIndex: true,
+    useFindAndModify: false,
   })
   .then(console.log("MongoDB Connected!"))
   .catch((err) => {
@@ -48,6 +51,7 @@ app.get("/api", (req, res) => {
   console.log("Home PAge for Server js line 44");
   res.status(200).json({ message: "api Worked" });
 });
-app.listen("5000", () => {
-  console.log("Connection Established!!");
+app.listen(PORT, () => {
+  console.log(`MONGO URL is ${DATABASE_URL}`);
+  console.log(`Server is running on port ${PORT}`);
 });
