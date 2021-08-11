@@ -9,7 +9,7 @@ node_modules
 *.rest
 
 #images
-/images/
+images/*
 
 # testing
 /coverage

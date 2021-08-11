@@ -1,9 +1,8 @@
 const router = require("express").Router();
-const User = require("../models/User");
 const Post = require("../models/Post");
 
 //CREATE POST
-router.post("/:id", async (req, res) => {
+router.post("/", async (req, res) => {
   const newPost = new Post(req.body);
   try {
     const createPost = await newPost.save();
@@ -16,7 +15,7 @@ router.post("/:id", async (req, res) => {
 //UPDATE POST
 router.put("/:id", async (req, res) => {
   try {
-    const post = await User.findById(req.params.id);
+    const post = await Post.findById(req.params.id);
     if (post.username === req.body.username) {
       try {
         const updatedPost = await Post.findByIdAndUpdate(
@@ -37,13 +36,17 @@ router.put("/:id", async (req, res) => {
     }
   } catch (err) {
     res.status(500).json(err);
+    // res.status(500).json({
+    //   error: err,
+    //   "req.params.id": req.params.id,
+    // });
   }
 });
 
 //DELETE POST
 router.delete("/:id", async (req, res) => {
   try {
-    const post = await User.findById(req.params.id);
+    const post = await Post.findById(req.params.id);
     if (post.username === req.body.username) {
       try {
         await post.delete();
