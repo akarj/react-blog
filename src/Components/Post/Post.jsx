@@ -9,7 +9,7 @@ export default function Post({ post }) {
           className="postImg"
           sizes="(max-width: 767px) 100vw, (max-width: 532px) 500px, (max-height: 530px) 500px, (min-aspect-ratio: 3169/1584) calc((calc(100vh - 280px)) * 2.00063), calc(100vw - 32px)"
           src={post.photo}
-          alt="aerial photography of mountains and near trees during daytime"
+          alt="Post"
         ></img>
       )}
 

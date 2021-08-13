@@ -1,4 +1,4 @@
-.login {
+div.login {
   height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
@@ -36,6 +36,10 @@
       color: white;
       border-radius: 10px;
       padding: 10px;
+    }
+    button.logicButton:disabled {
+      cursor: not-allowed;
+      background-color: rgb(226, 163, 140);
     }
   }
   button.loginRegisterButton {
