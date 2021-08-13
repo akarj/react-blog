@@ -10,6 +10,9 @@ node_modules
 # testing
 /coverage
 
+#images
+images/
+
 # production
 /build
 
@@ -19,6 +22,7 @@ node_modules
 .env.development.local
 .env.test.local
 .env.production.local
+
 
 npm-debug.log*
 yarn-debug.log*

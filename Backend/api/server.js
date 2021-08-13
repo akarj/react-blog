@@ -19,7 +19,7 @@ mongoose
     useCreateIndex: true,
     useFindAndModify: false,
   })
-  .then()
+  .then(console.log("MongoDB Connected!"))
   .catch((err) => {
     (err) => console.log(err);
   });
@@ -46,4 +46,8 @@ app.use("/api/categories", categoryRoute);
 app.get("/api", (req, res) => {
   res.status(200).json({ message: "api Worked" });
 });
-app.listen(PORT);
+// app.listen(PORT);
+app.listen(PORT, () => {
+  console.log(`MONGO URL is ${DATABASE_URL}`);
+  console.log(`Server is running on port ${PORT}`);
+});
