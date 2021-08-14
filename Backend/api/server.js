@@ -7,8 +7,10 @@ const usersRoute = require("./routes/Users");
 const postsRoute = require("./routes/Posts");
 const categoryRoute = require("./routes/Categories");
 const multer = require("multer");
+const path = require("path");
 
 app.use(express.json());
+app.use("/images", express.static(path.join(__dirname, "/images")));
 const PORT = process.env.PORT;
 const DATABASE_URL = process.env.MONGO_URL;
 
@@ -21,7 +23,7 @@ mongoose
   })
   .then(console.log("MongoDB Connected!"))
   .catch((err) => {
-    (err) => console.log(err);
+    console.log(err);
   });
 
 const storage = multer.diskStorage({
@@ -29,7 +31,7 @@ const storage = multer.diskStorage({
     cb(null, "images");
   },
   filename: (req, file, cb) => {
-    cb(null, "spme.jpg");
+    cb(null, req.body);
   },
 });
 
