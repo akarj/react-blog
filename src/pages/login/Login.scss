@@ -36,10 +36,10 @@ div.login {
       color: white;
       border-radius: 10px;
       padding: 10px;
-    }
-    button.logicButton:disabled {
-      cursor: not-allowed;
-      background-color: rgb(226, 163, 140);
+      &:disabled {
+        cursor: not-allowed;
+        background-color: rgb(226, 163, 140);
+      }
     }
   }
   button.loginRegisterButton {

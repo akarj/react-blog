@@ -10,8 +10,7 @@ node_modules
 # testing
 /coverage
 
-#images
-images/
+
 
 # production
 /build

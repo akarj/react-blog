@@ -39,10 +39,10 @@ export default function Topbar() {
                 WRITE
               </Link>
             </li>
-            <li className="topListItem">
-              <Link className="link" onClick={handleLogout} to="/login">
-                {user && "LOG OUT"}
-              </Link>
+            <li className="topListItem" onClick={handleLogout}>
+              {/* <Link className="link" onClick={handleLogout} to="/login"> */}
+              {user && "LOG OUT"}
+              {/* </Link> */}
             </li>
           </ul>
         </nav>
